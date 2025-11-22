@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - TechPhone</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">
+                <i class="fas fa-mobile-alt"></i>
+                <span>TechPhone</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="offers.html" class="active">Ofertas</a></li>
+                <li><a href="compare.html">Comparar</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar ofertas...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Offers Banner -->
+    <section class="offers-banner">
+        <div class="banner-content">
+            <h1>Ofertas Especiales</h1>
+            <p>¡Las mejores ofertas en smartphones y tablets!</p>
+        </div>
+    </section>
+
+    <!-- Hot Deals Section -->
+    <section class="hot-deals">
+        <h2>Ofertas Destacadas</h2>
+        <div class="deals-grid">
+            <!-- Los productos con descuento se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="promotions">
+        <div class="promo-cards">
+            <div class="promo-card">
+                <i class="fas fa-truck"></i>
+                <h3>Envío Gratis</h3>
+                <p>En compras mayores a $999</p>
+            </div>
+            <div class="promo-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>12 Meses sin Intereses</h3>
+                <p>Con tarjetas participantes</p>
+            </div>
+            <div class="promo-card">
+                <i class="fas fa-gift"></i>
+                <h3>Regalo Sorpresa</h3>
+                <p>En compras seleccionadas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Limited Offers -->
+    <section class="flash-deals">
+        <h2>Ofertas Relámpago</h2>
+        <div class="countdown-timer">
+            <p>Termina en:</p>
+            <div id="timer">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+        <div class="flash-deals-grid">
+            <!-- Las ofertas relámpago se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div id="cart" class="cart-modal">
+        <div class="cart-content">
+            <h2>Tu Carrito</h2>
+            <div class="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0</span>
+            </div>
+            <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal">
+        <div class="payment-content">
+            <div class="payment-header">
+                <h2>Finalizar Compra</h2>
+                <button class="close-payment">&times;</button>
+            </div>
+            
+            <form id="payment-form" class="payment-form">
+                <div class="order-summary">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="order-items">
+                        <!-- Items will be added dynamically -->
+                    </div>
+                    <div class="order-total">
+                        <span>Total:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-name">Nombre en la tarjeta</label>
+                    <input type="text" id="card-name" required placeholder="Como aparece en la tarjeta">
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" class="card-number" required placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-expiry">Fecha de expiración</label>
+                        <input type="text" id="card-expiry" class="card-expiry" required placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" class="card-cvc" required placeholder="123" maxlength="3">
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-button">Pagar ahora</button>
+            </form>
+
+            <div class="loading-spinner">
+                <i class="fas fa-spinner"></i>
+                <p>Procesando pago...</p>
+            </div>
+
+            <div class="payment-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>¡Pago exitoso!</h3>
+                <p>Tu pedido ha sido procesado correctamente.</p>
+                <p>Recibirás un email con los detalles de tu compra.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechPhone</h3>
+                <p>Tu tienda de confianza en tecnología móvil</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                    <li><a href="privacy.html">Política de Privacidad</a></li>
+                    <li><a href="shipping.html">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="returns.html">Devoluciones</a></li>
+                    <li><a href="warranty.html">Garantía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechPhone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/offers.js"></script>
+</body>
+</html>

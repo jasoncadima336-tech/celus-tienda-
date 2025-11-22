@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Modelos - TechPhone</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">
+                <i class="fas fa-mobile-alt"></i>
+                <span>TechPhone</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="offers.html">Ofertas</a></li>
+                <li><a href="compare.html" class="active">Comparar</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Compare Section -->
+    <section class="compare-page">
+        <h1>Compara Modelos</h1>
+        <p class="compare-intro">Selecciona hasta tres modelos para comparar sus características</p>
+        
+        <div class="compare-container">
+            <div class="compare-select">
+                <div class="phone-selector">
+                    <select id="phone1" class="compare-select-input">
+                        <option value="">Selecciona el primer teléfono</option>
+                    </select>
+                    <div class="selected-phone" id="selected-phone1"></div>
+                </div>
+                <div class="phone-selector">
+                    <select id="phone2" class="compare-select-input">
+                        <option value="">Selecciona el segundo teléfono</option>
+                    </select>
+                    <div class="selected-phone" id="selected-phone2"></div>
+                </div>
+                <div class="phone-selector">
+                    <select id="phone3" class="compare-select-input">
+                        <option value="">Selecciona el tercer teléfono (opcional)</option>
+                    </select>
+                    <div class="selected-phone" id="selected-phone3"></div>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+                <!-- Comparison data will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechPhone</h3>
+                <p>Tu tienda de confianza en tecnología móvil</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                    <li><a href="privacy.html">Política de Privacidad</a></li>
+                    <li><a href="shipping.html">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="returns.html">Devoluciones</a></li>
+                    <li><a href="warranty.html">Garantía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechPhone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPhone - Tu Tienda de Celulares</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <i class="fas fa-mobile-alt"></i>
+                <span>TechPhone</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="pages/products.html">Productos</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="pages/about.html">Nosotros</a></li>
+                <li><a href="pages/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Descubre el Futuro</h1>
+            <p>La última tecnología en smartphones al alcance de tu mano</p>
+            <a href="#products" class="cta-button">Comprar Ahora</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/hero-phone.png" alt="Último modelo">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="filters">
+            <div class="brand-filter">
+                <span>Marca:</span>
+                <button class="active" data-brand="all">Todas</button>
+                <button data-brand="samsung">Samsung</button>
+                <button data-brand="apple">iPhone</button>
+                <button data-brand="xiaomi">Xiaomi</button>
+                <button data-brand="motorola">Motorola</button>
+            </div>
+            <div class="product-search">
+                <input type="text" placeholder="Buscar en productos...">
+            </div>
+        </div>
+        <div class="products-grid">
+            <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Compare Section -->
+    <section id="compare" class="compare">
+        <h2>Compara Modelos</h2>
+        <div class="compare-container">
+            <div class="compare-select">
+                <select id="phone1">
+                    <option value="">Selecciona el primer teléfono</option>
+                </select>
+                <select id="phone2">
+                    <option value="">Selecciona el segundo teléfono</option>
+                </select>
+            </div>
+            <div class="comparison-table">
+                <!-- Comparison data will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div id="cart" class="cart-modal">
+        <div class="cart-content">
+            <h2>Tu Carrito</h2>
+            <div class="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0</span>
+            </div>
+            <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contáctanos</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4854995866373!2d-99.1331785!3d19.4326077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI1JzU3LjQiTiA5OcKwMDcnNTkuNCJX!5e0!3m2!1sen!2smx!4v1625761234567!5m2!1sen!2smx" 
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechPhone</h3>
+                <p>Tu tienda de confianza en tecnología móvil</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#terms">Términos y Condiciones</a></li>
+                    <li><a href="#privacy">Política de Privacidad</a></li>
+                    <li><a href="#shipping">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#returns">Devoluciones</a></li>
+                    <li><a href="#warranty">Garantía</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechPhone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal">
+        <div class="payment-content">
+            <div class="payment-header">
+                <h2>Finalizar Compra</h2>
+                <button class="close-payment">&times;</button>
+            </div>
+            
+            <form id="payment-form" class="payment-form">
+                <div class="order-summary">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="order-items">
+                        <!-- Items will be added dynamically -->
+                    </div>
+                    <div class="order-total">
+                        <span>Total:</span>
+                        <span class="total-amount">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="card-name">Nombre en la tarjeta</label>
+                    <input type="text" id="card-name" required placeholder="Como aparece en la tarjeta">
+                </div>
+
+                <div class="form-group">
+                    <label for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" class="card-number" required placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="card-expiry">Fecha de expiración</label>
+                        <input type="text" id="card-expiry" class="card-expiry" required placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" class="card-cvc" required placeholder="123" maxlength="3">
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-button">Pagar ahora</button>
+            </form>
+
+            <div class="loading-spinner">
+                <i class="fas fa-spinner"></i>
+                <p>Procesando pago...</p>
+            </div>
+
+            <div class="payment-success">
+                <i class="fas fa-check-circle"></i>
+                <h3>¡Pago exitoso!</h3>
+                <p>Tu pedido ha sido procesado correctamente.</p>
+                <p>Recibirás un email con los detalles de tu compra.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

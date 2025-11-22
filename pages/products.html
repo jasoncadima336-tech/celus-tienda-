@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - TechPhone</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">
+                <i class="fas fa-mobile-alt"></i>
+                <span>TechPhone</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="products.html" class="active">Productos</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="filters">
+            <div class="brand-filter">
+                <span>Marca:</span>
+                <button class="active" data-brand="all">Todas</button>
+                <button data-brand="samsung">Samsung</button>
+                <button data-brand="apple">iPhone</button>
+                <button data-brand="xiaomi">Xiaomi</button>
+                <button data-brand="motorola">Motorola</button>
+            </div>
+            <div class="product-search">
+                <input type="text" placeholder="Buscar en productos...">
+            </div>
+        </div>
+        <div class="products-grid">
+            <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div id="cart" class="cart-modal">
+        <div class="cart-content">
+            <h2>Tu Carrito</h2>
+            <div class="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0</span>
+            </div>
+            <button class="checkout-button">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TechPhone</h3>
+                <p>Tu tienda de confianza en tecnología móvil</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                    <li><a href="privacy.html">Política de Privacidad</a></li>
+                    <li><a href="shipping.html">Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <ul>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="returns.html">Devoluciones</a></li>
+                    <li><a href="warranty.html">Garantía</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechPhone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

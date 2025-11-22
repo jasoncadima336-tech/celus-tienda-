@@ -1,0 +1,182 @@
+/* Offers Page Styles */
+.offers-banner {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+}
+
+.offers-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.offers-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hot-deals {
+    padding: 4rem 2rem;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.deal-card {
+    background: var(--background-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ff4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.deal-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.deal-info {
+    padding: 1.5rem;
+}
+
+.deal-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.deal-price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.promotions {
+    background: var(--gray-light);
+    padding: 4rem 2rem;
+}
+
+.promo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.promo-card {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+}
+
+.promo-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.flash-deals {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.countdown-timer {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.flash-deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offers-banner {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .offers-banner h1 {
+        font-size: 2rem;
+    }
+
+    .hot-deals,
+    .promotions,
+    .flash-deals {
+        padding: 2rem 1rem;
+    }
+
+    .promo-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #timer {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.discount-badge {
+    animation: pulse 2s infinite;
+}
